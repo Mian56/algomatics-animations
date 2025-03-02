@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #44aa88;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        // GSAP Animation
+        gsap.to(".box", {
+            x: "80vw",    // Move box to 80% of the viewport width
+            duration: 3,  // Animation duration in seconds
+            repeat: -1,   // Repeat the animation indefinitely
+            yoyo: true,   // Reverse the animation after each cycle
+            ease: "power2.inOut"
+        });
+    </script>
+</body>
+</html>
